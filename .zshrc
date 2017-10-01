@@ -26,6 +26,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# add homebrew bins to the start of path
+export PATH="/usr/local/bin:$PATH"
+
+# add pip/python apps path
+export PATH=$HOME/Library/Python/2.7/bin:$PATH
+
+# add visual studio code to the path
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # OTHER ENV VARIABLES
 #--------------------------
 
@@ -92,8 +101,14 @@ alias clear-spotify-cache="rm -rf ~/Library/Caches/com.spotify.client/Data"
 alias vagrant='nocorrect vagrant'
 alias subl='nocorrect subl'
 
+# love2d
+alias love='/Applications/love.app/Contents/MacOS/love'
+
 # VARIABLES AND FUNCTIONS AND MISC
 #--------------------------
+
+# restart Virtualbox
+alias vbrestart2='sudo "/Library/Application Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh" restart'
 
 # shortcut to MAMP directory
 mamp=~/Documents/MAMPserver/
@@ -104,4 +119,5 @@ function cdl () {
 
 # work with a git repo in my hoem directory which stores dotfiles
 # dotfiles are in home and git is set up in ~/dotfiles
-alias gitdotfiles='/usr/bin/git --git-dir=/Users/macbookpro1/dotfiles/ --work-tree=/Users/macbookpro1'
+alias gitdotfiles='/usr/bin/git --git-dir=/Users/diverson/dotfiles/ --work-tree=/Users/diverson'
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
